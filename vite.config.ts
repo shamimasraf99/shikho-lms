@@ -8,4 +8,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  define: {
+    // Vite does not define `process.env` by default, so we define it to avoid "process is not defined" errors
+    'process.env': {}
+  }
 });
